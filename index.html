@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NeonPixel Labs - Inovação digital com propósito">
+    <title>NeonPixel Labs - Desenvolvimento Web e Mobile</title>
+    <link rel="stylesheet" href="style.css">  <!-- Link para o CSS -->
+</head>
+<body>
+    <header aria-label="Cabeçalho principal">
+        <div class="logo">NeonPixel Labs</div>
+        <nav aria-label="Navegação principal">
+            <ul id="nav-list">
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#mission">Missão</a></li>
+                <li><a href="#vision">Visão</a></li>
+                <li><a href="#values">Valores</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#differentials">Diferenciais</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()" aria-expanded="false">☰</div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="fade-in">
+           <div class="hero-text">
+           <h1>NEONPIXEL LABS</h1>
+           <p>Inovação com propósito para um mundo digital inclusivo.</p>
+           <a href="#about" class="btn">Saiba Mais</a>
+           </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Sobre a NeonPixel Labs</h2>
+            <p>Fundada em 2025 por um grupo de jovens desenvolvedores em Fortaleza, a NeonPixel Labs nasceu da fusão entre criatividade digital e propósito social. A ideia surgiu em um hackathon local, onde os fundadores criaram um app para conectar pequenos empreendedores a designers e programadores voluntários. O sucesso do projeto impulsionou a criação da empresa. Hoje, a NeonPixel Labs é um estúdio de desenvolvimento web e mobile que combina tecnologia de ponta com design centrado no usuário. Seu foco está em criar soluções digitais acessíveis, escaláveis e com impacto real — de aplicativos para ONGs a plataformas de e-commerce para startups.</p>
+        </section>
+
+        <section id="mission" class="fade-in">
+          <div class="mission-container">
+            <div class="mission-text">
+              <h2>Missão</h2>
+              <p>Transformar ideias em experiências digitais memoráveis, promovendo inclusão tecnológica e inovação com propósito.</p>
+            </div>
+            <div class="mission-image">
+             <img src="https://www.nicepng.com/png/detail/160-1600305_misso-disponibilizar-solues-de-tecnologia-aplicadas-world-map.png" alt="Imagem ilustrativa da missão da NeonPixel Labs" />
+            </div>
+          </div>
+        </section>
+
+        <section id="vision" class="fade-in">
+          <div class="vision-container">
+            <div class="vision-text">
+               <h2>Visão</h2>
+               <p>Ser referência nacional em desenvolvimento de soluções digitais que empoderam comunidades, negócios e criadores.</p>
+            </div>
+            <div class="vision-image">
+              <img src="https://cdn-icons-png.flaticon.com/512/15187/15187666.png" alt="Imagem ilustrativa da visão da NeonPixel Labs" />
+            </div>
+          </div>
+        </section>
+
+        <section id="values" aria-labelledby="values-heading">
+            <h2 id="values-heading">Valores</h2>
+            <ul>
+                <li>Inovação com propósito</li>
+                <li>Design inclusivo</li>
+                <li>Código limpo e sustentável</li>
+                <li>Colaboração e diversidade</li>
+                <li>Impacto social através da tecnologia</li>
+            </ul>
+        </section>
+
+        <section id="services" aria-labelledby="services-heading">
+            <h2 id="services-heading">Produtos e Serviços</h2>
+            <div class="service-grid">
+                <div class="service-item" onclick="openModal('Desenvolvimento de sites institucionais e landing pages')" tabindex="0">
+                    <img src="https://img.olx.com.br/images/49/492584091265577.jpg" alt="Desenvolvimento de sites">
+                    <h3>Desenvolvimento de sites institucionais e landing pages</h3>
+                </div>
+                <div class="service-item" onclick="openModal('Aplicativos mobile (iOS e Android)')">
+                    <img src="https://www.nicepng.com/png/detail/232-2328274_phone-app.png" alt="Aplicativos mobile">
+                    <h3>Aplicativos mobile (iOS e Android)</h3>
+                </div>
+                <div class="service-item" onclick="openModal('Plataformas web customizadas')">
+                    <img src="https://cdn.prod.website-files.com/5f6cb89f0f54c11d20c7a644/6470a7eed3d75adc85506a4d_ferramentas-gratuitas-para-e-commerce-capa.png" alt="Plataformas web customizadas">
+                    <h3>Plataformas web customizadas (e-commerce, gestão, educação)</h3>
+                </div>
+                <div class="service-item" onclick="openModal('Consultoria UX/UI')">
+                    <img src="https://png.pngtree.com/png-clipart/20211020/ourmid/pngtree-ui-and-ux-app-concept-elements-collection-for-social-media-png-image_3973592.png" alt="Consultoria UX/UI">
+                    <h3>Consultoria UX/UI</h3>
+                </div>
+                <div class="service-item" onclick="openModal('APIs e integrações com IA e automações')">
+                    <img src="https://png.pngtree.com/png-clipart/20230930/original/pngtree-flat-style-api-icon-for-software-integration-and-algorithm-programming-vector-png-image_12917234.png" alt="APIs e integrações">
+                    <h3>APIs e integrações com IA e automações</h3>
+                </div>
+                <div class="service-item" onclick="openModal('Soluções para acessibilidade digital')">
+                    <img src="https://www.handtalk.me/br/wp-content/uploads/sites/8/2022/03/131-capa-blogpost-5-solucoes-acessibilidade-navegacao.png" alt="Soluções para acessibilidade">
+                    <h3>Soluções para acessibilidade digital</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="differentials" aria-labelledby="differentials-heading">
+            <h2 id="differentials-heading">Diferenciais</h2>
+            <ul>
+                <li>Equipe 100% remota e diversa</li>
+                <li>Metodologia ágil com foco em MVPs</li>
+                <li>Parcerias com ONGs e coletivos locais</li>
+                <li>Design inclusivo e responsivo como padrão</li>
+                <li>Uso de tecnologias modernas: React, Flutter, Node.js, Firebase, Figma</li>
+            </ul>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projetos em Destaque</h2>
+            <div class="project-grid">
+                <div class="project-item" onclick="openProjectModal('EcoLink')" tabindex="0">
+                    <img src="https://pbs.twimg.com/profile_images/1269968323468496897/UvL6d7aP_400x400.jpg" alt="EcoLink">
+                    <h3>EcoLink</h3>
+                    <p>App que conecta cooperativas de reciclagem a clientes residenciais.</p>
+                </div>
+                <div class="project-item" onclick="openProjectModal('EduLivre')">
+                    <img src="https://i.pinimg.com/280x280_RS/c5/59/b1/c559b1339e8b3629cd99d43a187d0173.jpg" alt="EduLivre">
+                    <h3>EduLivre</h3>
+                    <p>Plataforma de cursos gratuitos para jovens periféricos.</p>
+                </div>
+                <div class="project-item" onclick="openProjectModal('Vitrine Criativa')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDX81ms2CjvFTYt2aMfw443nak0jj6WZJ6dw&s" alt="Vitrine Criativa">
+                    <h3>Vitrine Criativa</h3>
+                    <p>Marketplace para artesãos locais com sistema de pagamento integrado.</p>
+                </div>
+            </div>
+        </section>
+
+       <section id="contact" class="fade-in">
+            <h2 class="neon-title">ENTRE EM CONTATO</h2>
+            <form>
+               <input type="text" placeholder="Nome" required />
+               <input type="email" placeholder="Email" required />
+               <textarea placeholder="Mensagem" required></textarea>
+               <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer aria-label="Rodapé">
+        <p>&copy; 2025 NeonPixel Labs</p>
+    </footer>
+
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <span onclick="closeModal()" style="float:right; cursor:pointer;" aria-label="Fechar modal">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>  <!-- Link para o JavaScript -->
+</body>
+</html>

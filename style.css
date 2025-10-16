@@ -1,0 +1,493 @@
+/* Variáveis CSS para modernizar o tema */
+:root {
+    --primary-color: #ff00ff;
+    --secondary-color: #00ffff;
+    --background-dark: #0a0a0a;
+    --text-color: #fff;
+    --glow-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Fontes personalizadas */
+@font-face {
+    font-family: 'Space Age';
+    src: url('C:\Users\ofici\Downloads\neonpixel-labs-site\fonts\space_age\space age.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vogue';
+    src: url('C:\Users\ofici\Downloads\neonpixel-labs-site\fonts\vogue\Vogue.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Altone';
+    src: url('C:\Users\ofici\Downloads\neonpixel-labs-site\fonts\altone\Altone Trial-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Altone', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.logo {
+    font-family: 'Space Age', monospace;
+    font-size: 2rem; /* Aumentado para look moderno */
+    font-weight: 700;
+    text-shadow: var(--glow-shadow);
+}
+
+h1, h2 {
+    font-family: 'Vogue', sans-serif;
+    color: var(--secondary-color);
+    text-shadow: 0 0 15px var(--primary-color); /* Efeito mais suave */
+}
+
+header {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-color);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    text-shadow: 0 0 15px #ffd700;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+    color: var(--primary-color);
+}
+
+main section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #262626);
+    border-radius: 15px; /* Bordas mais arredondadas para modernidade */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 15px var(--secondary-color);
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.service-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-item, .project-item {
+    background: #1c1c1c;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.service-item:hover, .project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--primary-color);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #1a237e;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: #1a1a1a;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+main section {
+    margin-top: 80px;  /* Adicione margem superior para compensar o header fixo */
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #262626);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Seção Hero com fundo vibrante */
+#hero {
+  background: linear-gradient(135deg, #00ffff, #ff00ff); /* ciano para magenta */
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text {
+  color: white;
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #00c896;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00b386;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Título neon */
+.neon-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 2rem;
+}
+
+/* Formulário de contato */
+#contact {
+  background-color: #0f1c2e;
+  padding: 4rem 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e2a3a;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+button {
+  background-color: #00ffff;
+  color: #0f1c2e;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #00cccc;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .neon-title {
+    font-size: 2rem;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
+/* Botão com efeito neon pulsante */
+button {
+  background-color: #00ffff;
+  color: #0f1c2e;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  animation: pulseNeon 1.5s infinite;
+  transition: background 0.3s ease;
+}
+
+@keyframes pulseNeon {
+  0% {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+}
+
+/* Container da seção Missão */
+.mission-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+/* Texto da Missão */
+.mission-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.mission-text h2 {
+  font-size: 2rem;
+  color: #1a86f3;
+  margin-bottom: 1rem;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  color: #fffcfc;
+}
+
+/* Imagem da Missão */
+.mission-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.mission-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.mission-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .mission-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .mission-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Container da seção Visão */
+.vision-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+/* Texto da Visão */
+.vision-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.vision-text h2 {
+  font-size: 2rem;
+  color: #058dd1;
+  margin-bottom: 1rem;
+}
+
+.vision-text p {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* Imagem da Visão */
+.vision-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.vision-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.vision-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .vision-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vision-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .vision-text p {
+    font-size: 1rem;
+  }
+}
+
+
+
